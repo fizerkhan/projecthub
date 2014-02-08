@@ -16,7 +16,8 @@
     "gulp-concat": "~2.1.7",
     "gulp-cache": "~0.1.1",
     "gulp-ruby-sass": "~0.3.0",
-    "gulp-size": "~0.1.2"
+    "gulp-size": "~0.1.2",
+    "gulp-jade": "~0.4.1"
   },
   "engines": {
     "node": ">=0.10.0"
