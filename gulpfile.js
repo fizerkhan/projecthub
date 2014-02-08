@@ -21,24 +21,23 @@ var jade = require('gulp-jade');
 
 
 // Jade
-gulp.task('jade', function() {
-  var YOUR_LOCALS = {};
+// gulp.task('jade', function() {
+//   var YOUR_LOCALS = {};
 
-  gulp.src('./app/views/*.jade')
-    .pipe(jade({
-      locals: YOUR_LOCALS
-    }))
-    .pipe(gulp.dest('./dist/'))
-});
+//   gulp.src('./app/views/*.jade')
+//     .pipe(jade({
+//       locals: YOUR_LOCALS
+//     }))
+//     .pipe(gulp.dest('./dist/'))
+// });
 
 // HTML
-// gulp.task('html', function () {
-//      return gulp.src('app/*.html')
-//         .pipe(livereload(server))
-//         .pipe(size())
-//         .pipe(gulp.dest('dist'));
-// });
-//
+gulp.task('html', function () {
+     return gulp.src('app/*.html')
+        .pipe(livereload(server))
+        .pipe(size())
+        .pipe(gulp.dest('dist'));
+});
 
 // Styles
 gulp.task('styles', function () {
@@ -85,7 +84,7 @@ gulp.task('clean', function () {
 });
 
 // Build
-gulp.task('build', ['jade', 'styles', 'scripts', 'images']);
+gulp.task('build', ['html', 'styles', 'scripts', 'images']);
 
 // Default task
 gulp.task('default', ['clean'], function () {
@@ -100,8 +99,11 @@ gulp.task('watch', function () {
             return console.error(err);
         };
 
+        // Watch .jade files
+        // gulp.watch('app/views/*.jade', ['jade']);
+
         // Watch .html files
-        gulp.watch('app/views/*.jade', ['jade']);
+        gulp.watch('app/*.html', ['html']);
 
         // Watch .scss files
         gulp.watch('app/styles/**/*.scss', ['styles']);
