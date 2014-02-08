@@ -1,6 +1,6 @@
 {
   "name": "ss14-team-32",
-  "root": "./",
+  "root": "./dist",
   "clean_urls": true,
   "cache_control": {},
   "routes": {}
