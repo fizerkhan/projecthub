@@ -1,10 +1,13 @@
 # Project Hub
 
-This project is inspired from concept of [project-hub](https://github.com/bradfrost/project-hub)
+This project is inspired from concept of [project-hub](https://github.com/bradfrost/project-hub).
 Kudos to Brad Frost.
 
 A project hub is a tool for keeping track of the progress of a design project.
 The hub collaborated by team members, so that everyone involved in the team has access to it.
+
+To get started [ProjectHub](http://ss14-team-32.divshot.io/)
+
 
 The benefits of using a project hub:
 
