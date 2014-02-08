@@ -18,6 +18,7 @@ var livereload = require('gulp-livereload');
 var lr = require('tiny-lr');
 var server = lr();
 var jade = require('gulp-jade');
+var usemin = require('gulp-usemin');
 
 
 // Jade
@@ -41,7 +42,7 @@ gulp.task('html', function () {
 
 // Styles
 gulp.task('styles', function () {
-    return gulp.src('app/styles/main.scss')
+    return gulp.src('app/styles/app.scss')
         .pipe(sass({
           style: 'expanded',
           loadPath: ['app/bower_components']
@@ -56,9 +57,9 @@ gulp.task('styles', function () {
 // Scripts
 gulp.task('scripts', function () {
     return gulp.src('app/scripts/**/*.js')
-        .pipe(jshint('.jshintrc'))
-        .pipe(jshint.reporter('default'))
-        .pipe(concat('main.js'))
+        //.pipe(jshint('.jshintrc'))
+        //.pipe(jshint.reporter('default'))
+        // .pipe(concat('app.js'))
         .pipe(gulp.dest('dist/scripts'))
         .pipe(uglify())
         .pipe(livereload(server))
@@ -78,13 +79,18 @@ gulp.task('images', function () {
         .pipe(gulp.dest('dist/images'));
 });
 
+// Copy
+gulp.task('copy', function () {
+    return gulp.src('app/bower_components/font-awesome/fonts/*')
+        .pipe(gulp.dest('dist/fonts/'));
+});
 // Clean
 gulp.task('clean', function () {
-    return gulp.src(['dist/styles', 'dist/scripts', 'dist/images'], {read: false}).pipe(clean());
+    return gulp.src(['dist/index.html', 'dist/styles', 'dist/scripts', 'dist/images'], {read: false}).pipe(clean());
 });
 
 // Build
-gulp.task('build', ['html', 'styles', 'scripts', 'images']);
+gulp.task('build', ['html', 'styles', 'scripts', 'images', 'copy']);
 
 // Default task
 gulp.task('default', ['clean'], function () {

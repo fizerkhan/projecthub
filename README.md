@@ -3,12 +3,12 @@
 This project is inspired from the concept of [project-hub](https://github.com/bradfrost/project-hub).
 Kudos to Brad Frost.
 
-A project hub is a tool for keeping track of the progress of a client project.
-When we work with client projects, we have lot of discussion and documents flow
+A project hub is a tool for keeping track of the progress of a design projects.
+When we work with design projects, we have lot of discussion and documents flow
 through mail. We want to refer some discussion and its documents, we have to go
 through all list of mails. ProjectHub is place where you can clear time line of
 your projects, documents and discussion of the every single aspects happened
-in your client projects.
+in your design projects.
 
 To get started [ProjectHub](http://ss14-team-32.divshot.io/)
 
