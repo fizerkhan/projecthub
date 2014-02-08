@@ -16,7 +16,10 @@
     "angular-bootstrap": "~0.6.0",
     "angular-flash": "~0.1.10",
     "font-awesome": "~4.0.3",
-    "momentjs": "~2.4.0"
+    "momentjs": "~2.4.0",
+    "firebase": "~1.0.2",
+    "angularfire": "~0.6.0",
+    "firebase-simple-login": "~1.2.5"
   },
 
   "devDependencies": {}
