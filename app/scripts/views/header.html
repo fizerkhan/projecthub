@@ -12,6 +12,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
             <ul class="nav navbar-nav">
+                <li ng-cloak ng-show="auth.authenticated">
+                    <a href="#/app"> <i class="fa fa-th"></i> Projects</a>
+                </li>
                 <li class="navbar-text" ng-cloak ng-show="auth.authenticated"><img class="img-circle" ng-src="{{auth.image}}" alt=""><span ng-bind="auth.name"></span></li>
                 <li ng-cloak ng-show="auth.authenticated">
                     <a ng-click="logout()"> <i class="fa fa-sign-out"></i> Log out</a>
