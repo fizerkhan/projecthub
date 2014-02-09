@@ -1,0 +1,20 @@
+<div class="container">
+    <section class="project-list">
+        <div class="row">
+            <div class="project-box project-box-new col-sm-3">
+                <div class="form-group">
+                    <label class="control-label" for="project-name">Project Name</label>
+                    <input class="form-control" type="text" id="project-name" ng-model="projectName">
+                </div>
+                <button class="btn btn-success" ng-click="addProject()"> <i class="fa fa-check-circle-o"></i> Create Project</button>
+            </div>
+
+            <div ng-repeat="(key, project) in projects" class="project-box col-sm-3">
+                <a href="#/app/projects/{{key}}/edit" class="pull-right"><i class="fa fa-cog fa-2x"></i></a>
+                <h1>{{project.name}}</h1>
+                <a href="#/app/projects/{{key}}" class="btn btn-primary"> <i class="fa fa-eye"></i> View</a>
+                <a class="btn btn-danger" ng-click="removeProject(key)"> <i class="fa fa-trash-o"></i> Delete</a>
+            </div>
+        </div>
+    </section>
+</div>

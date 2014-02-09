@@ -1,7 +1,4 @@
 angular.module('myApp').controller('ProjectShowController',
-        function($scope, $rootScope) {
+        function($scope) {
 
-    $scope.getUserName = function () {
-        return $rootScope.username;
-    }
 });

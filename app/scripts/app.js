@@ -25,10 +25,16 @@ angular.module('myApp', [
                 controller: 'ProjectShowController'
             })
 
+            .when('/app/projects/:id/edit', {
+                templateUrl: 'scripts/views/projects/edit.html',
+                controller: 'ProjectEditController'
+            })
+
             //isAuthenticated is set below in the .run() command
             .otherwise({redirectTo: function() { return isAuthenticated? '/app' : '/'; }});
     })
    .constant('version', '0.1')
+   .constant('fbUrl', 'https://projecthub12.firebaseio.com')
    .constant('fbRef', new Firebase('https://projecthub12.firebaseio.com'));
 
 angular.module('myApp')
