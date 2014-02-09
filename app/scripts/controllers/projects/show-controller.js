@@ -15,4 +15,7 @@ angular.module('myApp').controller('ProjectShowController',
     var ref = new Firebase(fbUrl + '/' + $scope.user + '/projects/' + $scope.projectId);
     $scope.project = $firebase(ref);
 
+    // $scope.orderByDate = function(item) {
+    //     return moment(item.date, "YYYY-MM-DD").valueOf();
+    // }
 });

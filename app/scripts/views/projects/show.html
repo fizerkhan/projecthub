@@ -10,7 +10,7 @@
         <h1>{{project.name}}</h1>
         <div ng-show="project.activities">
             <ol class="timeline">
-                <li class="tl-node" ng-repeat="(key, item) in project.activities | orderBy: '-date'">
+                <li class="tl-node" ng-repeat="(key, item) in project.activities">
                     <div class="tl-stamp">{{item.date}}
                         <a href="#/app/projects/{{projectId}}/activity/{{key}}/edit"
                         class="edit-link" ng-show="auth"><i class="fa fa-pencil"></i></a>
