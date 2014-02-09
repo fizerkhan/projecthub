@@ -7,6 +7,7 @@ $icon-font-path: "/bower_components/bootstrap-sass/vender/assets/fonts/";
 @import "header";
 @import "index";
 @import "project";
+@import "timeline";
 @import "sticky_footer";
 
 body {
@@ -154,6 +155,15 @@ img::-moz-selection {
     margin-top: 30px;
     max-width: 500px !important;
 }
+
+.medium-container {
+    margin-top: 30px;
+    max-width: 660px !important;
+}
+
+
+
+
 
 
 

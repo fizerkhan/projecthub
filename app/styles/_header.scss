@@ -1,16 +1,22 @@
 .navbar {
     margin-bottom: 0;
-    text-transform: uppercase;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: #000;
 }
 
 .navbar-brand {
     font-weight: 700;
-}
+    color: $brand-color !important;
 
-.navbar-brand:focus {
-    outline: 0;
+    &:focus,
+    &:hover,
+    &:active {
+        color: #fff !important;
+    }
+
+    &:focus {
+        outline: 0;
+    }
 }
 
 .navbar-custom a {

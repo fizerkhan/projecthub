@@ -1,0 +1,29 @@
+<div class="container medium-container">
+    <section class="project-show">
+        <div class="pull-right">
+            <a href="#/app/projects/{{projectId}}/activity/add"
+            class="btn btn-xs btn-warning" ng-show="auth"> <i class="fa fa-plus"></i> Add new activity</a>
+            <a href="#/app/users/{{user}}/projects/{{projectId}}"
+                class="btn btn-xs btn-default" ng-show="auth" target="_blank">Share it to Client</a>
+        </div>
+
+        <h1>{{project.name}}</h1>
+        <div ng-show="project.activities">
+            <ol class="timeline">
+                <li class="tl-node" ng-repeat="(key, item) in project.activities | orderBy: '-date'">
+                    <div class="tl-stamp">{{item.date}}
+                        <a href="#/app/projects/{{projectId}}/activity/{{key}}/edit"
+                        class="edit-link" ng-show="auth"><i class="fa fa-pencil"></i></a>
+                    </div>
+                    <div class="tl-content">{{item.title}}</div>
+                    <div ng-repeat="document in item.documents">
+                        <a href="{{document.url}}" target="_blank">{{document.name}}</a>
+                    </div>
+                </li>
+            </ol>
+        </div>
+        <div ng-hide="project.activities" class="alert alert-info">
+            No activities recorded. Please create new activity.
+        </div>
+    </section>
+</div>

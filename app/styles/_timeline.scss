@@ -2,28 +2,39 @@
 
 /* Timeline Container */
 .timeline {
-  border-left: 5px solid #dddddd;
-  padding-bottom: 3em;
-  position: relative; }
-  .timeline:before {
+    border-left: 5px solid #dddddd;
+    padding-bottom: 3em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.timeline:before {
     content: "";
     position: absolute;
     bottom: 0;
-    left: -1.47em;
+    left: -1.57em;
     width: 40px;
     height: 40px;
     border-radius: 40px;
-    background: #dddddd;
-    border: 5px solid #dddddd; }
+    background: #e74c3c;
+    border: 5px solid #dddddd;
+    z-index: 10;
+}
 
 /* Individual Timeline Item */
 .tl-node {
-  padding-left: 1em;
-  margin-bottom: 3em;
-  position: relative; }
-  .tl-node a {
-    display: block; }
-  .tl-node:before {
+    padding-left: 1.5em;
+    margin-bottom: 3em;
+    position: relative;
+}
+
+.tl-node a {
+    display: block;
+}
+
+.tl-node:before {
     content: "";
     position: absolute;
     top: 0;
@@ -32,11 +43,23 @@
     height: 20px;
     border-radius: 20px;
     background: #fff;
-    border: 5px solid #dddddd; }
+    border: 5px solid #dddddd;
+}
+
+.tl-node:last-child:before {
+    width: 0;
+    height: 0;
+    border: none;
+}
 
 /* Timestamp */
 .tl-stamp {
-  font-size: 0.7em;
-  color: gray; }
+  font-size: 1em;
+  color: gray;
+}
+
+.edit-link {
+    display: inline !important;
+}
 
 /************End Timeline**************/

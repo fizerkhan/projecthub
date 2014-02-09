@@ -30,6 +30,21 @@ angular.module('myApp', [
                 controller: 'ProjectEditController'
             })
 
+            .when('/app/projects/:projectId/activity/add', {
+                templateUrl: 'scripts/views/projects/activity-add-edit.html',
+                controller: 'ActivityController'
+            })
+
+            .when('/app/projects/:projectId/activity/:id/edit', {
+                templateUrl: 'scripts/views/projects/activity-add-edit.html',
+                controller: 'ActivityController'
+            })
+
+            .when('/app/users/:userId/projects/:id', {
+                templateUrl: 'scripts/views/projects/show.html',
+                controller: 'ProjectShowController'
+            })
+
             //isAuthenticated is set below in the .run() command
             .otherwise({redirectTo: function() { return isAuthenticated? '/app' : '/'; }});
     })

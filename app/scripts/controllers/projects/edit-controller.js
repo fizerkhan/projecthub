@@ -8,7 +8,6 @@ angular.module('myApp').controller('ProjectEditController',
 
     var ref = new Firebase(fbUrl + '/' + $rootScope.auth.user + '/projects/' + $routeParams.id);
     $scope.project = $firebase(ref);
-    console.log(fbUrl + '/' + $rootScope.auth.user + '/projects/' + $routeParams.id );
 
     $scope.updateProject = function() {
         $scope.project.$save();
