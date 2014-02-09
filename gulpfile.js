@@ -61,9 +61,20 @@ gulp.task('scripts', function () {
         //.pipe(jshint.reporter('default'))
         // .pipe(concat('app.js'))
         .pipe(gulp.dest('dist/scripts'))
-        .pipe(uglify())
+        //.pipe(uglify())
         .pipe(livereload(server))
         .pipe(gulp.dest('dist/scripts'));
+});
+
+// Templates
+gulp.task('templates', function () {
+    return gulp.src('app/scripts/views/**/*.html')
+        //.pipe(jshint('.jshintrc'))
+        //.pipe(jshint.reporter('default'))
+        // .pipe(concat('app.js'))
+        .pipe(gulp.dest('dist/scripts/views'))
+        .pipe(livereload(server))
+        .pipe(gulp.dest('dist/scripts/views'));
 });
 
 // Images
@@ -90,7 +101,7 @@ gulp.task('clean', function () {
 });
 
 // Build
-gulp.task('build', ['html', 'styles', 'scripts', 'images', 'copy']);
+gulp.task('build', ['html', 'styles', 'scripts', 'templates', 'images', 'copy']);
 
 // Default task
 gulp.task('default', ['clean'], function () {
@@ -116,6 +127,9 @@ gulp.task('watch', function () {
 
         // Watch .js files
         gulp.watch('app/scripts/**/*.js', ['scripts']);
+
+        // Watch html template files
+        gulp.watch('app/scripts/views/**/*.html', ['templates']);
 
         // Watch image files
         gulp.watch('app/images/**/*', ['images']);

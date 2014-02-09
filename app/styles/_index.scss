@@ -1,0 +1,59 @@
+.intro {
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    background: url(../images/intro-bg.jpg) no-repeat bottom center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.brand-heading {
+    font-size: 38px;
+}
+
+.intro-text {
+    font-size: 18px;
+}
+
+.content-section {
+    padding: 50px 0 ;
+}
+
+.features {
+    background: #000;
+    border: 1px solid #fafafa;
+    margin-left: -10px;
+    margin-right: -10px;
+    color: #fff;
+
+    .fa-stack {
+        display: block;
+        font-size: 5em;
+        color: #e67e22;
+        margin: 20px auto;
+        text-align: center;
+    }
+
+    p {
+        text-align: center;
+        font-size: 16px;
+    }
+}
+
+.callout {
+    margin: 20px auto;
+    span {
+        font-size: 20px;
+    }
+}
