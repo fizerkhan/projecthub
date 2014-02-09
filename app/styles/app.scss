@@ -52,6 +52,13 @@ a:focus {
     color: $brand-color;
 }
 
+// Angular click anchor element
+[ng-click],
+[data-ng-click],
+[x-ng-click] {
+    cursor: pointer;
+}
+
 .light {
     font-weight: 400;
 }
